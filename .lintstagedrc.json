@@ -1,7 +1,6 @@
 {
   "src/**/*.{ts}": [
     "prettier --write src/app/**/*",
-    "npx eslint --fix -c .eslintrc.json --ext=ts src/app -f html -o ./eslint/eslintResult.html",
-    "git add"
+    "npx eslint --fix -c .eslintrc.json --ext=ts src/app -f html -o ./eslint/eslintResult.html"
   ]
 }
