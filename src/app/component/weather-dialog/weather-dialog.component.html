@@ -1,21 +1,21 @@
-<h1 class="title" matDialogTitle>Track {{ weather?.name }}</h1>
+<h1 class="title" matDialogTitle>Track {{ weather.name }}</h1>
 <div class="divider modal-divider"></div>
 <mat-dialog-content mat-dialog-content class="weather-dialog">
   <div class="dialog-line">
     <label>Name:</label>
-    <span>{{ weather?.name }}</span>
+    <span>{{ weather.name }}</span>
   </div>
   <div class="dialog-line">
     <label>Location:</label>
     <span>
-      {{ weather?.position?.lat }}&deg;<small><i>lat</i></small>
-      {{ weather?.position?.long }}&deg;<small><i>long</i></small>
+      {{ weather.position.lat }}&deg;<small><i>lat</i></small>
+      {{ weather.position.long }}&deg;<small><i>long</i></small>
     </span>
   </div>
   <div class="dialog-line">
     <label>Altitude:</label>
     <span>
-      {{ weather?.position?.alt?.toFixed(0) }} <small><i>feet</i></small>
+      {{ weather.position.alt.toFixed(0) }} <small><i>feet</i></small>
     </span>
   </div>
 </mat-dialog-content>

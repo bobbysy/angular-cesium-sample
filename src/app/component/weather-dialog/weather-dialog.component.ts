@@ -9,7 +9,6 @@ import {
   ViewEncapsulation
 } from "@angular/core";
 import { Observable, Subject } from "rxjs";
-import { AcEntity } from "angular-cesium";
 import { takeUntil } from "rxjs/operators";
 import { MAT_DIALOG_DATA } from "@angular/material/dialog";
 
@@ -23,7 +22,7 @@ import { MAT_DIALOG_DATA } from "@angular/material/dialog";
 export class WeatherDialogComponent implements OnInit, OnDestroy {
   public weather$: Observable<any>;
 
-  public weather: AcEntity;
+  public weather: any;
 
   public weatherEntityFn: any;
 
