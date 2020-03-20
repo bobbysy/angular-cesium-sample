@@ -33,9 +33,7 @@
               "./node_modules/bootstrap/dist/css/bootstrap.css",
               "./node_modules/cesium/Build/Cesium/Widgets/widgets.css"
             ],
-            "scripts": [
-              "./node_modules/cesium/Build/Cesium/Cesium.js"
-            ]
+            "scripts": ["./node_modules/cesium/Build/Cesium/Cesium.js"]
           },
           "configurations": {
             "production": {
@@ -94,9 +92,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {

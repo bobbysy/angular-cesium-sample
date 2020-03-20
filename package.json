@@ -3,13 +3,12 @@
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "prettier": "prettier",
     "start": "ng serve",
     "build": "ng build",
     "test": "jest",
     "test:watch": "jest --watch",
     "e2e": "ng e2e",
-    "lint": "eslint --fix -c .eslintrc.json --ext=ts src/app -f html -o ./eslint/eslintResult.html",
+    "eslint": "eslint --fix -c .eslintrc.json --ext=ts src/app -f html -o ./eslint/eslintResult.html",
     "format": "prettier --write src/app/**/*",
     "build-deploy-gh-pages": "ng build --prod --base-href 'https://bobbysy.github.io/angular-cesium-sample/' && npx ngh --dir dist/angular-cesium-sample"
   },
