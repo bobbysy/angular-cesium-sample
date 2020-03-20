@@ -34,129 +34,19 @@
     "project": "./tsconfig.json"
   },
   "rules": {
-    "prettier/prettier": [
-      0,
-      {
-        "semi": true,
-        "singleQuote": true,
-        "trailingComma": "es5",
-        "printWidth": 140,
-        "tabWidth": 2,
-        "arrowParens": "avoid"
-      }
-    ],
-    "no-undef": "error",
-    "import/prefer-default-export": "error",
-    // Restore `airbnb` rules overridden by `typescript-eslint/recommended` ruleset.
-    "@typescript-eslint/camelcase": [
-      "error",
-      {
-        "properties": "never",
-        "ignoreDestructuring": false
-      }
-    ],
-    "no-constant-condition": "warn",
-    "@typescript-eslint/require-await": ["off"],
-    "no-param-reassign": [
-      "error",
-      {
-        "props": true,
-        "ignorePropertyModificationsFor": [
-          "acc",
-          "accumulator",
-          "e",
-          "ctx",
-          "req",
-          "request",
-          "res",
-          "response",
-          "$scope",
-          "staticContext"
-        ]
-      }
-    ],
-    "@typescript-eslint/no-empty-function": [
-      "error",
-      {
-        "allow": ["arrowFunctions", "functions", "methods"]
-      }
-    ],
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      {
-        "vars": "all",
-        "args": "after-used",
-        "ignoreRestSiblings": true
-      }
-    ],
-    "@typescript-eslint/no-use-before-define": [
-      "error",
-      {
-        "functions": true,
-        "classes": true,
-        "variables": true
-      }
-    ],
-    "prefer-const": [
-      "error",
-      {
-        "destructuring": "any",
-        "ignoreReadBeforeAssign": true
-      }
-    ],
-    // Replace remaining `airbnb` rules by `typescript-eslint` equivalent if available
-    "no-useless-constructor": "error",
-    "require-atomic-updates": "off",
-    "arrow-parens": ["error", "always"],
+    // not applicable for Angular
     "import/extensions": [
       "error",
       "ignorePackages",
       {
-        "js": "never",
-        "mjs": "never",
-        "jsx": "never",
         "ts": "never"
       }
-    ],
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": [
-          "test/**",
-          "tests/**",
-          "spec/**",
-          "**/__tests__/**",
-          "**/__mocks__/**",
-          "test.{js,jsx}",
-          "test-*.{js,jsx}",
-          "**/*{.,_}{test,spec}.{js,jsx}",
-          "**/jest.config.js",
-          "**/jest.setup.js",
-          "**/vue.config.js",
-          "**/webpack.config.js",
-          "**/webpack.config.*.js",
-          "**/rollup.config.js",
-          "**/rollup.config.*.js",
-          "**/gulpfile.js",
-          "**/gulpfile.*.js",
-          "**/Gruntfile{,.js}",
-          "**/protractor.conf.js",
-          "**/protractor.conf.*.js"
-        ],
-        "optionalDependencies": false
-      }
-    ],
-    "quotes": ["off"]
+    ]
   },
   "overrides": [
     {
       "files": ["**/*.ts", "**/*.spec.ts"],
-      "rules": {
-        // Turn off rules where tsc does a better job or has issues with TypeScript files.
-        // TypeScript's `noFallthroughCasesInSwitch` option is more robust
-        // See https://github.com/facebook/create-react-app/issues/6906
-        "default-case": "off"
-      }
+      "rules": {}
     }
   ]
 }
