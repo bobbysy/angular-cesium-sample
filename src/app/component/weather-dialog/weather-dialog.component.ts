@@ -8,10 +8,10 @@ import {
   OnInit,
   ViewEncapsulation
 } from "@angular/core";
-import { MAT_DIALOG_DATA } from "@angular/material";
 import { Observable, Subject } from "rxjs";
 import { AcEntity } from "angular-cesium";
 import { takeUntil } from "rxjs/operators";
+import { MAT_DIALOG_DATA } from "@angular/material/dialog";
 
 @Component({
   selector: "app-weather-dialog",

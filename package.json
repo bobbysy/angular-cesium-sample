@@ -8,9 +8,8 @@
     "build": "ng build",
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "eslint --fix -c .eslintrc.json --ext=ts src/app -f html -o ./eslint/eslintResult.html",
     "e2e": "ng e2e",
-    "eslint": "eslint --fix -c ts.eslintrc --ext=ts src/app -f html -o ./eslint/eslintResult.html",
+    "lint": "eslint --fix -c .eslintrc.json --ext=ts src/app -f html -o ./eslint/eslintResult.html",
     "format": "prettier --write src/app/**/*",
     "build-deploy-gh-pages": "ng build --prod --base-href 'https://bobbysy.github.io/angular-cesium-sample/' && npx ngh --dir dist/angular-cesium-sample"
   },
