@@ -1,4 +1,3 @@
-import { CdkPopoverEditModule } from "@angular/cdk-experimental/popover-edit";
 import { A11yModule } from "@angular/cdk/a11y";
 import { DragDropModule } from "@angular/cdk/drag-drop";
 import { PortalModule } from "@angular/cdk/portal";
@@ -8,7 +7,6 @@ import { CdkStepperModule } from "@angular/cdk/stepper";
 import { CdkTableModule } from "@angular/cdk/table";
 import { CdkTreeModule } from "@angular/cdk/tree";
 import { NgModule } from "@angular/core";
-import { MatPopoverEditModule } from "@angular/material-experimental/popover-edit";
 
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
 import { MatBadgeModule } from "@angular/material/badge";
@@ -45,12 +43,10 @@ import { MatTabsModule } from "@angular/material/tabs";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatTreeModule } from "@angular/material/tree";
-import "hammerjs";
 
 @NgModule({
   imports: [
     A11yModule,
-    CdkPopoverEditModule,
     CdkTableModule,
     CdkTreeModule,
     CdkStepperModule,
@@ -74,7 +70,6 @@ import "hammerjs";
     MatListModule,
     MatMenuModule,
     MatPaginatorModule,
-    MatPopoverEditModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
     MatRadioModule,
@@ -97,7 +92,6 @@ import "hammerjs";
   ],
   exports: [
     A11yModule,
-    CdkPopoverEditModule,
     CdkTableModule,
     CdkTreeModule,
     CdkStepperModule,
@@ -121,7 +115,6 @@ import "hammerjs";
     MatListModule,
     MatMenuModule,
     MatPaginatorModule,
-    MatPopoverEditModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
     MatRadioModule,
