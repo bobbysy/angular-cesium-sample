@@ -19,7 +19,7 @@ export class MapComponent implements AfterViewInit {
 
   Cesium = Cesium;
 
-  @ViewChild("mainMap", { static: false }) mainMap: MapComponent;
+  @ViewChild("mainMap") mainMap: MapComponent;
 
   MapLayerProviderOptions = MapLayerProviderOptions;
 

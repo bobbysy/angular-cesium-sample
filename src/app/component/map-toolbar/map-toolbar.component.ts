@@ -29,7 +29,7 @@ export class MapToolbarComponent {
 
   editing$: EditorObservable<any>;
 
-  @ViewChild("rangeAndBearing", { static: false })
+  @ViewChild("rangeAndBearing")
   private rangeAndBearing: RangeAndBearingComponent;
 
   constructor(
