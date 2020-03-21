@@ -1,7 +1,6 @@
 export interface Theme {
   name: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  properties: any;
+  properties: Record<string, string>;
 }
 
 export const light: Theme = {
