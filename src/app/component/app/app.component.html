@@ -12,10 +12,6 @@
           <mat-icon>person</mat-icon>
         </button>
         <mat-menu #appSetting="matMenu">
-          <!--          <button (click)="toggleTheme()" mat-menu-item>-->
-          <!--            <mat-icon>brightness_medium</mat-icon>-->
-          <!--            <span>Theme</span>-->
-          <!--          </button>-->
           <mat-slide-toggle
             class="mat-menu-item"
             [checked]="isDarkTheme | async"
@@ -28,7 +24,7 @@
       </mat-toolbar-row>
     </mat-toolbar>
 
-    <mat-sidenav-container>
+    <mat-sidenav-container fxFlex>
       <mat-sidenav #sidenav>
         <mat-nav-list>
           <div
