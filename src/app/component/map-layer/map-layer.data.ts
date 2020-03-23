@@ -3,8 +3,10 @@ import { MapLayerProviderOptions } from "angular-cesium";
 export interface MapLayerData {
   id: string;
   provider: MapLayerProviderOptions;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  options: any;
+  options: {
+    url?: string;
+    credit?: string;
+  };
   show: boolean;
 }
 
@@ -16,16 +18,16 @@ export const mapLayerDataList: MapLayerData[] = [
       url:
         "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer",
     },
-    show: true,
+    show: false,
   },
-  // {
-  //   id: "OpenStreetMap",
-  //   provider: MapLayerProviderOptions.OpenStreetMap,
-  //   options: {
-  //     url: "https://a.tile.openstreetmap.org/"
-  //   },
-  //   show: true
-  // },
+  {
+    id: "OpenStreetMap",
+    provider: MapLayerProviderOptions.OpenStreetMap,
+    options: {
+      url: "https://a.tile.openstreetmap.org/",
+    },
+    show: false,
+  },
   {
     id: "UrlTemplateImagery",
     provider: MapLayerProviderOptions.UrlTemplateImagery,
