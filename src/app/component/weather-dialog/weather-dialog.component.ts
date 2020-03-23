@@ -1,4 +1,3 @@
-/* global Cesium */
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -35,7 +34,7 @@ export class WeatherDialogComponent implements OnInit, OnDestroy {
     this.cd = cd;
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.weatherEntityFn = this.data.weatherEntityFn;
     this.weather = this.data.weather;
     this.weather$ = this.data.weatherObservable;
@@ -51,14 +50,14 @@ export class WeatherDialogComponent implements OnInit, OnDestroy {
 
   private changePosToDeg = (weather: any) => {
     const pos = Cesium.Cartographic.fromCartesian(weather.position);
-    console.log(pos);
+    // console.log(pos);
     // this.weather.position = {
     //   lat: this.toDegrees(pos.latitude),
     //   long: this.toDegrees(pos.longitude)
     // };
   };
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.stopper$.next(true);
   }
 

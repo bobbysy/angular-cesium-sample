@@ -1,4 +1,3 @@
-/* global Cesium */
 import {
   DraggableToMapService,
   MapLayerProviderOptions,
@@ -48,8 +47,7 @@ export class MapComponent implements AfterViewInit {
         credit: `Contains information from Weather Forecast accessed on ${new Date()} from <a href='https://www.nea.gov.sg/'>National Environment Agency</a> which is made available under the terms of the <a href='https://data.gov.sg/open-data-licence'>Singapore Open Data Licence version 1.0</a>`,
       }),
     };
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    this.viewerConf.viewerModifier = (viewer: any): void => {
+    this.viewerConf.viewerModifier = (viewer): void => {
       viewer.screenSpaceEventHandler.removeInputAction(
         this.Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK
       );
@@ -66,7 +64,7 @@ export class MapComponent implements AfterViewInit {
       ),
       duration: 0,
     });
-    this.draggableToMapService.dragUpdates().subscribe((e) => console.log(e));
+    // this.draggableToMapService.dragUpdates().subscribe((e) => console.log(e));
   }
 }
 

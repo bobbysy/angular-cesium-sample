@@ -1,4 +1,3 @@
-/* global Cesium */
 import { Component, NgZone, OnInit, ViewChild } from "@angular/core";
 import {
   AcEntity,

@@ -1,4 +1,3 @@
-/* global Cesium */
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { AcEntity, AcNotification, ActionType } from "angular-cesium";

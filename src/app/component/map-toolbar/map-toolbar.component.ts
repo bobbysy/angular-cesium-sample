@@ -1,4 +1,3 @@
-/* global Cesium */
 import { Component, ViewChild } from "@angular/core";
 import {
   CameraService,
