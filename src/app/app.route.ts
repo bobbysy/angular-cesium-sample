@@ -5,13 +5,13 @@ export const routes: Routes = [
   {
     path: "",
     redirectTo: "/map",
-    pathMatch: "full"
+    pathMatch: "full",
   },
   {
     path: "map",
-    component: MapComponent
+    component: MapComponent,
     // canActivate: [AuthGuard]
-  }
+  },
 ];
 
 export default "routes";

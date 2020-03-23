@@ -5,7 +5,7 @@ import { MapLayerService } from "../../service/map-layer.service";
   selector: "app-map-layer",
   templateUrl: "./map-layer.component.html",
   styleUrls: ["./map-layer.component.scss"],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MapLayerComponent {
   constructor(public mapLayerService: MapLayerService) {

@@ -8,7 +8,7 @@ describe("WeatherDialogComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [WeatherDialogComponent]
+      declarations: [WeatherDialogComponent],
     }).compileComponents();
   }));
 

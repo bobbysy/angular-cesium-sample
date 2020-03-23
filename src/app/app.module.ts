@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { BrowserModule } from "@angular/platform-browser";
 import {
   AngularCesiumModule,
-  AngularCesiumWidgetsModule
+  AngularCesiumWidgetsModule,
 } from "angular-cesium";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { HttpClientModule } from "@angular/common/http";
@@ -26,7 +26,7 @@ import { WeatherDialogComponent } from "./component/weather-dialog/weather-dialo
     MapToolbarComponent,
     MapLayerComponent,
     WeatherDataLayerComponent,
-    WeatherDialogComponent
+    WeatherDialogComponent,
   ],
   imports: [
     FormsModule,
@@ -44,10 +44,10 @@ import { WeatherDialogComponent } from "./component/weather-dialog/weather-dialo
       routes,
       { enableTracing: false } // <-- debugging purposes only
     ),
-    AngularCesiumWidgetsModule
+    AngularCesiumWidgetsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
 

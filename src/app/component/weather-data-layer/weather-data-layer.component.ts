@@ -6,7 +6,7 @@ import {
   AcNotification,
   CesiumEvent,
   MapEventsManagerService,
-  PickOptions
+  PickOptions,
 } from "angular-cesium";
 import { Observable } from "rxjs";
 import { WeatherDataServiceProvider } from "../../utils/services/dataProviders/weather-data-service-provider.service";
@@ -15,7 +15,7 @@ import { WeatherDataServiceProvider } from "../../utils/services/dataProviders/w
   selector: "app-weather-data-layer",
   templateUrl: "./weather-data-layer.component.html",
   providers: [WeatherDataServiceProvider],
-  styleUrls: ["./weather-data-layer.component.scss"]
+  styleUrls: ["./weather-data-layer.component.scss"],
 })
 export class WeatherDataLayerComponent implements OnInit {
   @ViewChild(AcLayerComponent, { static: true }) layer: AcLayerComponent;
@@ -37,7 +37,7 @@ export class WeatherDataLayerComponent implements OnInit {
       entityType: AcEntity,
       event: CesiumEvent.MOUSE_MOVE,
       pick: PickOptions.PICK_FIRST,
-      priority: 2
+      priority: 2,
     });
     mouseOverObservable.subscribe((event) => {
       const data = event.entities !== null ? event.entities[0] : null;
@@ -57,7 +57,7 @@ export class WeatherDataLayerComponent implements OnInit {
       entityType: AcEntity,
       event: CesiumEvent.LEFT_DOUBLE_CLICK,
       pick: PickOptions.PICK_FIRST,
-      priority: 2
+      priority: 2,
     });
     doubleClickObservable.subscribe((event) => {
       const data = event.entities !== null ? event.entities[0] : null;

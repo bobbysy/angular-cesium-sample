@@ -4,7 +4,7 @@ import {
   MapLayerProviderOptions,
   MapsManagerService,
   SceneMode,
-  ViewerConfiguration
+  ViewerConfiguration,
 } from "angular-cesium";
 import { AfterViewInit, Component, ViewChild } from "@angular/core";
 
@@ -12,7 +12,7 @@ import { AfterViewInit, Component, ViewChild } from "@angular/core";
   selector: "app-map",
   templateUrl: "./map.component.html",
   providers: [ViewerConfiguration],
-  styleUrls: ["./map.component.scss"]
+  styleUrls: ["./map.component.scss"],
 })
 export class MapComponent implements AfterViewInit {
   sceneMode = SceneMode.SCENE2D;
@@ -45,8 +45,8 @@ export class MapComponent implements AfterViewInit {
       mapProjection: new Cesium.WebMercatorProjection(),
       imageryProvider: new Cesium.TileMapServiceImageryProvider({
         url: Cesium.buildModuleUrl("Assets/Textures/NaturalEarthII"),
-        credit: `Contains information from Weather Forecast accessed on ${new Date()} from <a href='https://www.nea.gov.sg/'>National Environment Agency</a> which is made available under the terms of the <a href='https://data.gov.sg/open-data-licence'>Singapore Open Data Licence version 1.0</a>`
-      })
+        credit: `Contains information from Weather Forecast accessed on ${new Date()} from <a href='https://www.nea.gov.sg/'>National Environment Agency</a> which is made available under the terms of the <a href='https://data.gov.sg/open-data-licence'>Singapore Open Data Licence version 1.0</a>`,
+      }),
     };
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     this.viewerConf.viewerModifier = (viewer: any): void => {
@@ -64,7 +64,7 @@ export class MapComponent implements AfterViewInit {
         1.29027,
         200000
       ),
-      duration: 0
+      duration: 0,
     });
     this.draggableToMapService.dragUpdates().subscribe((e) => console.log(e));
   }

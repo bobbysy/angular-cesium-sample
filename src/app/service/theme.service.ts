@@ -3,7 +3,7 @@ import { Observable, Subject } from "rxjs";
 import { dark, light, Theme } from "../component/theme/theme";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class ThemeService {
   private active: Theme = light;

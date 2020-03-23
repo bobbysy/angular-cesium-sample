@@ -37,7 +37,7 @@ export interface TwoHourWeatherForecast {
 }
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class WeatherDataServiceProvider {
   private dataCache = new Map<string, AcNotification>();
@@ -74,12 +74,12 @@ export class WeatherDataServiceProvider {
         data.label_location.latitude
       ),
       forecast: forecastData,
-      ...data
+      ...data,
     };
     return {
       id: data.name,
       entity: new AcEntity(weather),
-      actionType: ActionType.ADD_UPDATE
+      actionType: ActionType.ADD_UPDATE,
     };
   }
 

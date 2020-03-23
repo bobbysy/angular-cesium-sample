@@ -8,7 +8,7 @@ import {
   PolygonsEditorService,
   PolylineEditorObservable,
   PolylinesEditorService,
-  RangeAndBearingComponent
+  RangeAndBearingComponent,
 } from "angular-cesium";
 
 @Component({
@@ -19,8 +19,8 @@ import {
     CirclesEditorService,
     EllipsesEditorService,
     PolygonsEditorService,
-    PolylinesEditorService
-  ]
+    PolylinesEditorService,
+  ],
 })
 export class MapToolbarComponent {
   rnb: PolylineEditorObservable;
@@ -91,7 +91,7 @@ export class MapToolbarComponent {
         103.851959,
         1.29027,
         200000
-      )
+      ),
     });
   }
 }

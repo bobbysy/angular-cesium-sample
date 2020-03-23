@@ -6,7 +6,7 @@ import {
   Inject,
   OnDestroy,
   OnInit,
-  ViewEncapsulation
+  ViewEncapsulation,
 } from "@angular/core";
 import { Observable, Subject } from "rxjs";
 import { takeUntil } from "rxjs/operators";
@@ -17,7 +17,7 @@ import { MAT_DIALOG_DATA } from "@angular/material/dialog";
   templateUrl: "./weather-dialog.component.html",
   styleUrls: ["./weather-dialog.component.scss"],
   encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WeatherDialogComponent implements OnInit, OnDestroy {
   public weather$: Observable<any>;

@@ -88,7 +88,7 @@ import { MatTreeModule } from "@angular/material/tree";
     MatTreeModule,
     ScrollingModule,
     PortalModule,
-    MatNativeDateModule
+    MatNativeDateModule,
   ],
   exports: [
     A11yModule,
@@ -133,8 +133,8 @@ import { MatTreeModule } from "@angular/material/tree";
     MatTreeModule,
     ScrollingModule,
     PortalModule,
-    MatNativeDateModule
-  ]
+    MatNativeDateModule,
+  ],
 })
 export class SharedMaterialModule {}
 

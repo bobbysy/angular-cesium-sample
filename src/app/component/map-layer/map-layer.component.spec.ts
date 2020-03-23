@@ -8,7 +8,7 @@ describe("MapLayerComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [MapLayerComponent]
+      declarations: [MapLayerComponent],
     }).compileComponents();
   }));
 

@@ -14,9 +14,9 @@ export const mapLayerDataList: MapLayerData[] = [
     provider: MapLayerProviderOptions.ArcGisMapServer,
     options: {
       url:
-        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer",
     },
-    show: true
+    show: true,
   },
   // {
   //   id: "OpenStreetMap",
@@ -32,10 +32,10 @@ export const mapLayerDataList: MapLayerData[] = [
     options: {
       url: "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
       credit:
-        "Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL."
+        "Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.",
     },
-    show: true
-  }
+    show: true,
+  },
 ];
 
 export default "mapLayerDataList";
