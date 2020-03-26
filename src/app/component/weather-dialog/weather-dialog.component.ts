@@ -51,10 +51,10 @@ export class WeatherDialogComponent implements OnInit, OnDestroy {
   private changePosToDeg = (weather: any) => {
     const pos = Cesium.Cartographic.fromCartesian(weather.position);
     // console.log(pos);
-    // this.weather.position = {
-    //   lat: this.toDegrees(pos.latitude),
-    //   long: this.toDegrees(pos.longitude)
-    // };
+    this.weather.position = {
+      lat: this.toDegrees(pos.latitude),
+      long: this.toDegrees(pos.longitude),
+    };
   };
 
   ngOnDestroy(): void {
