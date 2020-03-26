@@ -3,3 +3,5 @@
 # Sample Angular Application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
+
+[Demo](http://bobbysy.github.io/angular-cesium-sample)
