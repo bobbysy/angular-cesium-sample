@@ -40,8 +40,8 @@ export class MapComponent implements AfterViewInit {
       navigationHelpButton: false,
       navigationInstructionsInitiallyVisible: false,
       sceneMode: SceneMode.SCENE2D,
-      mapMode2D: this.Cesium.MapMode2D.INFINITE_SCROLL,
-      mapProjection: new Cesium.WebMercatorProjection(),
+      mapMode2D: Cesium.MapMode2D.INFINITE_SCROLL,
+      mapProjection: Cesium.WebMercatorProjection(),
       imageryProvider: new Cesium.TileMapServiceImageryProvider({
         url: Cesium.buildModuleUrl("Assets/Textures/NaturalEarthII"),
         credit: `Contains information from Weather Forecast accessed on ${new Date()} from <a href='https://www.nea.gov.sg/'>National Environment Agency</a> which is made available under the terms of the <a href='https://data.gov.sg/open-data-licence'>Singapore Open Data Licence version 1.0</a>`,
@@ -49,7 +49,7 @@ export class MapComponent implements AfterViewInit {
     };
     this.viewerConf.viewerModifier = (viewer): void => {
       viewer.screenSpaceEventHandler.removeInputAction(
-        this.Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK
+        Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK
       );
     };
   }
