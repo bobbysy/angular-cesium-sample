@@ -6,8 +6,8 @@
 >
   <ac-billboard-primitive-desc
     props="{
-    scale: 1,
-    image: weather.image,
+    scale: 0.2,
+    image: weatherIconFromForecast(weather.forecast),
     name: weather.name,
     position: weather.position,
   }"
@@ -17,7 +17,7 @@
   <ac-label-primitive-desc
     props="{
         position: weather.position,
-        pixelOffset : pixelOffset([-45,25]) ,
+        pixelOffset : [-25,25] | pixelOffset ,
         text: weather.forecast,
         font: '30px sans-serif',
         scale: 0.5,

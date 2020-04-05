@@ -9,6 +9,7 @@ import {
 } from "angular-cesium";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { HttpClientModule } from "@angular/common/http";
+import { MatIconRegistry } from "@angular/material/icon";
 import { SharedMaterialModule } from "./shared/material-module";
 import { ThemeModule } from "./component/theme/theme.module";
 import { AppComponent } from "./component/app/app.component";
@@ -19,7 +20,6 @@ import { MapLayerComponent } from "./component/map-layer/map-layer.component";
 import { WeatherDataLayerComponent } from "./component/weather-data-layer/weather-data-layer.component";
 import { WeatherDialogComponent } from "./component/weather-dialog/weather-dialog.component";
 import { CustomIconRegistry, SVG_ICONS } from "./shared/custom-icon-registry";
-import { MatIconRegistry } from "@angular/material/icon";
 
 // These are the hardcoded inline svg sources to be used by the `<mat-icon>` component.
 export const svgIconProviders = [

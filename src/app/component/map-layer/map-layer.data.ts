@@ -38,6 +38,17 @@ export const mapLayerDataList: MapLayerData[] = [
     },
     show: true,
   },
+  {
+    id: "UrlTemplateImagery",
+    provider: MapLayerProviderOptions.UrlTemplateImagery,
+    options: {
+      url:
+        "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png",
+      credit:
+        "Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.",
+    },
+    show: true,
+  },
 ];
 
 export default "mapLayerDataList";
