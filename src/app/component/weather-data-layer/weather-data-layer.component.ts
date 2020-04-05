@@ -3,17 +3,22 @@ import {
   AcEntity,
   AcLayerComponent,
   AcNotification,
+  CameraService,
   CesiumEvent,
   MapEventsManagerService,
   PickOptions,
 } from "angular-cesium";
 import { Observable } from "rxjs";
+import { filter, map } from "rxjs/operators";
+import { MatDialog } from "@angular/material/dialog";
 import { WeatherDataServiceProvider } from "../../utils/services/dataProviders/weather-data-service-provider.service";
+import { WeatherDialogComponent } from "../weather-dialog/weather-dialog.component";
+import { ThemeService } from "../../service/theme.service";
 
 @Component({
   selector: "app-weather-data-layer",
   templateUrl: "./weather-data-layer.component.html",
-  providers: [WeatherDataServiceProvider],
+  providers: [WeatherDataServiceProvider, ThemeService],
   styleUrls: ["./weather-data-layer.component.scss"],
 })
 export class WeatherDataLayerComponent implements OnInit {
@@ -23,10 +28,15 @@ export class WeatherDataLayerComponent implements OnInit {
 
   private lastPickData: any;
 
+  private isDialogOpen = false;
+
   constructor(
     private ngZone: NgZone,
+    public dialog: MatDialog,
     private mapEventsManager: MapEventsManagerService,
-    public weatherDataServiceProvider: WeatherDataServiceProvider
+    public weatherDataServiceProvider: WeatherDataServiceProvider,
+    private themeService: ThemeService,
+    private cameraService: CameraService
   ) {
     this.weather$ = weatherDataServiceProvider.get();
   }
@@ -61,14 +71,60 @@ export class WeatherDataLayerComponent implements OnInit {
     doubleClickObservable.subscribe((event) => {
       const data = event.entities !== null ? event.entities[0] : null;
       if (data) {
-        this.ngZone.run(() => data.forecast);
+        this.ngZone.run(() => {
+          this.openDialog(data, event.entities[0]);
+        });
       }
     });
   }
 
-  pixelOffset = (value) => new Cesium.Cartesian2(value[0], value[1]);
+  openDialog(weatherData: any, cesiumEntity: any): void {
+    weatherData.dialogOpen = true;
+    weatherData.picked = false;
+    weatherData.icon = this.weatherIconFromForecast(weatherData.forecast);
+    this.layer.update(weatherData, weatherData.id);
+    this.dialog.closeAll();
+    const weatherObservable = this.getSingleTrackObservable(weatherData.id);
+    this.dialog
+      .open(WeatherDialogComponent, {
+        data: {
+          weatherObservable,
+          weather: { ...weatherData },
+        },
+        position: {
+          top: "64px",
+          left: "0",
+        },
+      })
+      .afterClosed()
+      .subscribe(() => {
+        this.cameraService.untrackEntity();
+        weatherData.dialogOpen = false;
+        this.isDialogOpen = false;
+      });
+    this.isDialogOpen = true;
+  }
+
+  getSingleTrackObservable(weatherId: string) {
+    return this.weather$.pipe(
+      filter((notification) => notification.id === weatherId),
+      map((notification) => notification.entity)
+    );
+  }
 
   getTextColor = (): any => Cesium.Color.BLACK;
+
+  weatherIconFromForecast(forecast: string): string {
+    // Strip forecast of brackets, replace ' ' with '_' and convert to lowercase
+    let themeName = this.themeService.getActiveTheme().name;
+    themeName = "dark";
+    const weatherIcon = forecast
+      .toLowerCase()
+      .replace(/\(/g, "")
+      .replace(/\)/g, "")
+      .replace(/ /g, "_");
+    return `assets/weather-icons/${themeName}/${weatherIcon}_${themeName}_color_96dp.png`;
+  }
 }
 
 export default "WeatherDataLayerComponent";
