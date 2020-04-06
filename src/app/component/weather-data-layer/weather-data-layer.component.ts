@@ -116,13 +116,21 @@ export class WeatherDataLayerComponent implements OnInit {
 
   weatherIconFromForecast(forecast: string): string {
     // Strip forecast of brackets, replace ' ' with '_' and convert to lowercase
-    let themeName = this.themeService.getActiveTheme().name;
-    themeName = "dark";
-    const weatherIcon = forecast
+    const themeName = this.themeService.getActiveTheme().name;
+
+    // light rain => Drizzle
+    // partly cloudy (day) / partly cloudy (night)
+
+    let weatherIcon = forecast
       .toLowerCase()
       .replace(/\(/g, "")
       .replace(/\)/g, "")
       .replace(/ /g, "_");
+
+    if (weatherIcon === "light_rain") {
+      weatherIcon = "drizzle";
+    }
+
     return `assets/weather-icons/${themeName}/${weatherIcon}_${themeName}_color_96dp.png`;
   }
 }
