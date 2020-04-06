@@ -29,7 +29,7 @@ export const mapLayerDataList: MapLayerData[] = [
     show: false,
   },
   {
-    id: "UrlTemplateImagery",
+    id: "CARTO Positron with labels",
     provider: MapLayerProviderOptions.UrlTemplateImagery,
     options: {
       url: "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
@@ -39,7 +39,7 @@ export const mapLayerDataList: MapLayerData[] = [
     show: true,
   },
   {
-    id: "UrlTemplateImagery",
+    id: "CARTO Voyager with labels",
     provider: MapLayerProviderOptions.UrlTemplateImagery,
     options: {
       url:
@@ -47,7 +47,27 @@ export const mapLayerDataList: MapLayerData[] = [
       credit:
         "Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.",
     },
-    show: true,
+    show: false,
+  },
+  {
+    id: "OneMap Night",
+    provider: MapLayerProviderOptions.UrlTemplateImagery,
+    options: {
+      url: "https://maps-{s}.onemap.sg/v3/Night/{z}/{x}/{y}.png",
+      credit:
+        '<img src="https://docs.onemap.sg/maps/images/oneMap64-01.png" style="height:20px;width:20px;"/> New OneMap | Map data &copy; contributors, <a href="http://SLA.gov.sg">Singapore Land Authority</a>',
+    },
+    show: false,
+  },
+  {
+    id: "OneMap Default",
+    provider: MapLayerProviderOptions.UrlTemplateImagery,
+    options: {
+      url: "https://maps-{s}.onemap.sg/v3/Default/{z}/{x}/{y}.png",
+      credit:
+        '<img src="https://docs.onemap.sg/maps/images/oneMap64-01.png" style="height:20px;width:20px;"/> New OneMap | Map data &copy; contributors, <a href="http://SLA.gov.sg">Singapore Land Authority</a>',
+    },
+    show: false,
   },
 ];
 
