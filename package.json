@@ -76,8 +76,8 @@
     "eslint-plugin-sonarjs": "^0.5.0",
     "husky": "^4.2.5",
     "jest": "^25.4.0",
+    "prettier": "2.0.5",
     "lint-staged": "^10.1.7",
-    "prettier": "2.0.4",
     "protractor": "~5.4.4",
     "ts-node": "~8.9.0",
     "typescript": "~3.7.5"
