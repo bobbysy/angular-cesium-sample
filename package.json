@@ -51,7 +51,7 @@
     "jest-preset-angular": "^8.2.0",
     "moment": "^2.29.1",
     "npm": "^6.14.11",
-    "rxjs": "^6.6.3",
+    "rxjs": "^6.6.6",
     "tslib": "^1.14.1",
     "web-animations-js": "^2.3.2",
     "zone.js": "^0.10.3"
