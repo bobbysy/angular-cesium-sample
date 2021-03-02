@@ -46,7 +46,7 @@
     "angular-cesium": "0.0.65",
     "angular-cli-ghpages": "^0.6.2",
     "bootstrap": "^4.6.0",
-    "cesium": "^1.79.0",
+    "cesium": "^1.79.1",
     "core-js": "^3.9.1",
     "jest-preset-angular": "^8.2.0",
     "moment": "^2.29.1",
