@@ -43,7 +43,7 @@
     "@angular/platform-browser": "^9.0.7",
     "@angular/platform-browser-dynamic": "^9.0.7",
     "@angular/router": "^9.0.7",
-    "angular-cesium": "0.0.65",
+    "angular-cesium": "0.0.66",
     "angular-cli-ghpages": "^0.6.2",
     "bootstrap": "^4.6.0",
     "cesium": "^1.80.0",
